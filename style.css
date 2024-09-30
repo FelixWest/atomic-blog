@@ -1,0 +1,198 @@
+/* Reset default padding, margin, and ensure consistent box-sizing */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Global body styles: sets font family, color, background, and base padding */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #222;
+  line-height: 1.25;
+  background: #fff;
+  padding: 32px;
+}
+
+/* Inverts colors for dark mode simulation */
+.fake-dark-mode {
+  filter: invert(100%);
+  transition: all 0.5s;
+}
+
+/* Style for dark mode toggle button, positioned at the top-right */
+.btn-fake-dark-mode {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 16px;
+  line-height: 1;
+  font-size: 26px;
+  background-color: #ffe8cc;
+  border: none;
+}
+
+/* Main content container with max-width for readability */
+section {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Header with flex layout for spacing elements */
+header {
+  margin-bottom: 32px;
+  font-weight: bold;
+  justify-content: space-between;
+  display: flex;
+}
+
+/* Styling for main heading (h1) and associated icon */
+h1 {
+  font-size: 26px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Larger icon size within the main heading */
+h1 span {
+  font-size: 140%;
+  line-height: 1;
+}
+
+/* Secondary heading with uppercase text */
+h2 {
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+/* Tertiary heading with capitalize style */
+h3 {
+  text-transform: capitalize;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+/* Flex layout for header elements (search, results, buttons) */
+header div {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+/* Smaller font size for buttons inside the header */
+header button {
+  font-size: 14px;
+}
+
+/* Form styling: padding, background color, and flex layout */
+form {
+  padding: 24px;
+  background-color: #fff4e6;
+  display: flex;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* Main section margin for spacing */
+main {
+  margin-bottom: 40px;
+}
+
+/* Lower opacity for the aside section */
+aside {
+  margin-bottom: 40px;
+  opacity: 75%;
+}
+
+/* Inputs, textareas, and buttons share font size and padding */
+input,
+textarea,
+button {
+  font-size: 16px;
+  padding: 8px 12px;
+  border: 1px solid #ffe8cc;
+  font-family: inherit;
+  color: inherit;
+}
+
+/* Set width for input elements */
+input {
+  width: 12rem;
+}
+
+/* Placeholder text color */
+*::placeholder {
+  color: #999;
+}
+
+/* Focus outline for better accessibility */
+*:focus {
+  outline: 2px solid #ffa94d;
+  border-radius: 2px;
+}
+
+/* Textarea stretches to fill available space and height */
+textarea {
+  flex: 1;
+  height: 50px;
+}
+
+/* Button styling: border, background, and padding */
+button {
+  border: 1px solid #ffa94d;
+  background-color: #ffa94d;
+  font-weight: 700;
+  padding: 9px 24px;
+  cursor: pointer;
+}
+
+/* Responsive grid layout for posts */
+main ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 32px;
+}
+
+/* Styling for each post item */
+main li {
+  border: 1px solid #ffe8cc;
+  padding: 16px 20px;
+}
+
+/* Hover effect for post items */
+main li:hover {
+  background-color: #fff4e6;
+}
+
+/* Flex column layout for archive posts in the aside */
+aside ul {
+  font-size: 90%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Styling for each archive post item */
+aside li {
+  border: 1px solid #ffe8cc;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Margin adjustment for buttons below heading */
+h2 + button {
+  margin-bottom: 24px;
+}
+
+/* Smaller buttons for archive items */
+aside li button {
+  padding: 4px 8px;
+  font-size: 14px;
+}
